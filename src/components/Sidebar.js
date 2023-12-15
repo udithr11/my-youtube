@@ -1,27 +1,19 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
   if (!isMenuOpen) {
-    return (
-      <div className="col-span-1 bg-orange-200 shadow-lg">
-        <div className="p-2">
-          <ul>
-            <li>Home</li>
-            <li>Shorts</li>
-            <li>Live</li>
-            <li> Subscription </li>
-          </ul>
-        </div>
-      </div>
-    );
+    return null;
   }
   return (
-    <div className="col-span-1 bg-red-400 shadow-lg">
+    <div className="w-[200px] bg-red-400 shadow-lg">
       <div className="p-2">
         <ul>
-          <li>Home</li>
+          <Link to="/">
+            <li>Home</li>
+            </Link>
           <li>Shorts</li>
           <li>Live</li>
         </ul>
