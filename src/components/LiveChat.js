@@ -22,7 +22,8 @@ const LiveChat = () => {
       );
     }, 2000);
     return () => clearInterval(i);
-  }, []);
+  }, [dispatch]); 
+  
 
   return (
     <>
