@@ -3,7 +3,7 @@ import { USER_LOGO } from "../utils/constants";
 
 const commentsData = [
   {
-    name: "saini",
+    name: "udith",
     text: "lorem ipsum dolor sit amet assa in the end it doesn't even matter",
     replies: [],
   },
@@ -49,15 +49,15 @@ const commentsData = [
     ],
   },
   {
-    name: "saini",
+    name: "rahul",
     text: "lorem ipsum dolor sit amet assa in the end it doesn't even matter",
     replies: [
       {
-        name: "saini",
+        name: "john",
         text: "lorem ipsum dolor sit amet assa in the end it doesn't even matter",
         replies: [
           {
-            name: "saini",
+            name: "peter",
             text: "lorem ipsum dolor sit amet assa in the end it doesn't even matter",
             replies: [],
           },
@@ -66,31 +66,31 @@ const commentsData = [
     ],
   },
   {
-    name: "saini",
+    name: "rx-1",
     text: "lorem ipsum dolor sit amet assa in the end it doesn't even matter",
     replies: [],
   },
   {
-    name: "saini",
+    name: "bob",
     text: "lorem ipsum dolor sit amet assa in the end it doesn't even matter",
     replies: [
       {
-        name: "saini",
+        name: "rodri",
         text: "lorem ipsum dolor sit amet assa in the end it doesn't even matter",
         replies: [],
       },
     ],
   },
   {
-    name: "saini",
+    name: "phlips",
     text: "lorem ipsum dolor sit amet assa in the end it doesn't even matter",
     replies: [
       {
-        name: "saini",
+        name: "sam",
         text: "lorem ipsum dolor sit amet assa in the end it doesn't even matter",
         replies: [
           {
-            name: "saini",
+            name: "luna",
             text: "lorem ipsum dolor sit amet assa in the end it doesn't even matter",
             replies: [],
           },
@@ -101,7 +101,7 @@ const commentsData = [
 ];
 
 const Comment = ({ data }) => {
-  const { name, text, replies } = data;
+  const { name, text } = data;
   return (
     <div className="flex bg-slate-200 shadow-md p-2 my-2 rounded-lg">
       <img className="w-8 h-8 border border-black" alt="user" src={USER_LOGO} />

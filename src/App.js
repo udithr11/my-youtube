@@ -13,7 +13,7 @@ const appRouter =createBrowserRouter([{
   path: "/",
   element:<Body/>,
   children:[{
-    path:"/",
+    path:"/", 
     element:<MainContainer/>,
   },{
     path:"watch",

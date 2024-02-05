@@ -8,7 +8,7 @@ const VideoCards = ({ info }) => {
     dispatch(closeMenu());
   };
 
-  const { snippet, statistics } = info; //will get snippet and statistics from infp , destructuring on the fly
+  const { snippet, statistics } = info; //will get snippet and statistics from info , destructuring on the fly
   const { channelTitle, title, thumbnails } = snippet;
 
   return (

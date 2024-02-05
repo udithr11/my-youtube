@@ -1,13 +1,15 @@
 import React from "react";
 import { useSearchParams } from "react-router-dom";
 import CommentsContainer from "./CommentsContainer";
+import LiveChat from "./LiveChat";
 
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
   const id = searchParams.get("v");
   return (
-    <div className="flex flex-col">
-    <div>
+    <div className="flex  flex-col">
+    <div className="px-5 flex">
+      <div >
       <iframe
         width="1200"
         height="600"
@@ -17,6 +19,8 @@ const WatchPage = () => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
       ></iframe>
+      </div>
+      <div className="w-full"><LiveChat/></div>
     </div>
     <div><CommentsContainer/></div>
     </div>

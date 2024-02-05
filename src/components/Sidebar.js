@@ -8,7 +8,7 @@ const Sidebar = () => {
     return null;
   }
   return (
-    <div className="w-[200px] bg-red-400 shadow-lg">
+    <div className="w-[200px] bg-red-400 shadow-lg rounded-sm h-96 mt-[18px]">
       <div className="p-2">
         <ul>
           <Link to="/">
