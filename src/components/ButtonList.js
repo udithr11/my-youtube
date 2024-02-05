@@ -5,7 +5,7 @@ const items = ["All", "Cricket", "Football", "News", "Cooking", "Tech","Cricket1
 
 const ButtonList = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto flex overflow-auto  ">
+    <div className="w-[1150px] mx-auto flex overflow-auto  ">
       {items.map((item) => (
         <Button
           key={item}

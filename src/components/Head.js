@@ -87,64 +87,64 @@ const Head = () => {
  
 
   return (
-    <div className="flex bg-gray-200 h-20 p-1 m-1 rounded-sm justify-between shadow-md">
-      <div className="flex p-1 m-1">
+    <div className="flex bg-gray-200 h-10 p-1 m-1 rounded-sm items-center justify-between shadow-md">
+    <div className="flex p-1 m-1 items-center">
+      <img
+        className="px-2 w-12 h-8 m-1 cursor-pointer"
+        alt="menu"
+        onClick={() => handleToggleMenu()}
+        src={HAMBURGER_LOGO}
+      />
+      <a href="/" className="w-36 cursor-pointer">
         <img
-          className="px-2 m-1 cursor-pointer "
-          alt="menu"
-          onClick={() => handleToggleMenu()}
-          src={HAMBURGER_LOGO}
+          className="px-2 m-1 rounded-full h-8 mt-1"
+          alt="youtube"
+          src={YOUTUBE_LOGO}
         />
-        <a href=" /" className=" w-60  h-20 cursor-pointer">
-          <img
-            className="px-2 m-1 rounded-full h-10 mt-2"
-            alt="youtube"
-            src={YOUTUBE_LOGO}
-          />
-        </a>
-      </div>
-      <div className="relative -mt-2">
-        <div>
-          <input
-            className="border border-black h-10 w-[550px] p-2 my-7 -mt-2 rounded-l-md"
-            type="text"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            onFocus={(e) => setshowSuggestions(true)}
-
-            onBlur={() => setTimeout(() => setshowSuggestions(false), 200)}
-          ></input>
-          <button
-            className=" border border-black rounded-r-full h-10 w-12 my-7"
-            onClick={() => handleSearchClicked(searchQuery)}
-          >
-            🔍
-          </button>
-          {showSuggestions && (
-            <div className="absolute bg-white border border-gray-300 w-[550px] mt-1  rounded-md shadow-md">
-              <ul>
-                {suggestions.map((item) => (
-                  <li
-                    className="hover:bg-slate-300 p-2 cursor-pointer border"
-                    key={item}
-                    onClick={() => {
-                      setSearchQuery(item);
-                      setshowSuggestions(false);
-                    }}
-                  >
-                    🔍 {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      </div>
-
-      <div className="flex p-1 m-1">
-        <img className="rounded-full" alt="userLogo" src={USER_LOGO} />
+      </a>
+    </div>
+    <div className="relative ">
+      <div>
+        <input
+          className="border border-black w-[550px] h-7 p-2 my-7  rounded-l-md"
+          type="text"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          onFocus={(e) => setshowSuggestions(true)}
+          onBlur={() => setTimeout(() => setshowSuggestions(false), 200)}
+        ></input>
+        <button
+          className="border border-black rounded-r-full h-7 w-12 my-7"
+          onClick={() => handleSearchClicked(searchQuery)}
+        >
+          🔍
+        </button>
+        {showSuggestions && (
+          <div className="absolute bg-white border border-gray-300 w-[550px] mt-1 rounded-md shadow-md">
+            <ul>
+              {suggestions.map((item) => (
+                <li
+                  className="hover:bg-slate-300 p-2 cursor-pointer border"
+                  key={item}
+                  onClick={() => {
+                    setSearchQuery(item);
+                    setshowSuggestions(false);
+                  }}
+                >
+                  🔍 {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
+  
+    <div className="flex h-10 w-10 p-1 m-1 items-center">
+      <img className="rounded-full" alt="userLogo" src={USER_LOGO} />
+    </div>
+  </div>
+  
   );
 };
 
