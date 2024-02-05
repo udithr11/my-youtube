@@ -104,9 +104,9 @@ const Comment = ({ data }) => {
   const { name, text } = data;
   return (
     <div className="flex bg-slate-200 shadow-md p-2 my-2 rounded-lg">
-      <img className="w-8 h-8 border border-black" alt="user" src={USER_LOGO} />
+      <img className="w-5 h-5 border border-black" alt="user" src={USER_LOGO} />
       <div className="px-3">
-        <p className="font-bold text-xl">{name}</p>
+        <p className="font-bold ">{name}</p>
         <p> {text}</p>
       </div>
     </div>
@@ -128,7 +128,7 @@ const CommentsList = ({ comments }) => {
 const CommentsContainer = () => {
   return (
     <div className=" w-[1200px] p-2">
-      <h1 className="text-2xl font-bold">Comments</h1>
+      <h1 className=" font-bold">Comments</h1>
       <CommentsList comments={commentsData} />
     </div>
   );

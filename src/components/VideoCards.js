@@ -19,7 +19,7 @@ const VideoCards = ({ info }) => {
       <img className="rounded-xl " alt="foto" src={thumbnails.medium.url} />
       <div>
         <ul>
-          <li className="font-bold text-xl">{title}</li>
+          <li className="font-bold">{title}</li>
           <li>{channelTitle}</li>
           <li>{statistics.viewCount} views</li>
         </ul>

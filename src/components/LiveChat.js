@@ -43,7 +43,7 @@ const LiveChat = () => {
         e.preventDefault()}}>
         <input
           type="text"
-          className="border border-black rounded-md shadow-lg h-10 w-full px-2"
+          className="border border-black rounded-md shadow-lg h-7 w-full px-2"
           value={liveMessage}
           onChange={(e) => setLiveMessage(e.target.value)}
         />

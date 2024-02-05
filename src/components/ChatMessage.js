@@ -6,7 +6,7 @@ const ChatMessage = ({name, message}) => {
     <div className="items-center flex p-3 shadow-sm">
       {" "}
       <img
-        className="rounded-full h-8 border border-blue-300"
+        className="rounded-full h-5 border border-blue-300"
         alt="userLogo"
         src={USER_LOGO}
       />
